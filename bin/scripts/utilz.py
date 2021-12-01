@@ -108,6 +108,7 @@ def identity_theft(player_name):
     else:
 
         achievement = player["player"]["achievements"]
+        stars = achievement.get('bedwars_level', 0)
         data = player['player']['stats']['Bedwars']
 
 #
@@ -147,9 +148,10 @@ def identity_theft(player_name):
         solos_final_explosion_deaths = data.get('eight_one_fire_tick_final_deaths_bedwars', 0)
         solos_final_magic_deaths = data.get('eight_one_magic_final_deaths_bedwars', 0)
         solos_final_suffocation_deaths = data.get('eight_one_suffocation_final_deaths_bedwars', 0)
-
-        solos_fkdr = solos_final_kills / solos_final_deaths
-
+        try:
+            solos_fkdr = solos_final_kills / solos_final_deaths
+        except ZeroDivisionError:
+            solos_fkdr = solos_final_kills
         solos_kills = data.get('eight_one_kills_bedwars', 0)
         solos_void_kills = data.get('eight_one_void_kills_bedwars', 0)
         solos_projectile_kills = data.get('eight_one_projectile_kills_bedwars', 0)
@@ -165,20 +167,22 @@ def identity_theft(player_name):
         solos_explosion_deaths = data.get('eight_one_fire_tick_deaths_bedwars', 0)
         solos_magic_deaths = data.get('eight_one_magic_deaths_bedwars', 0)
         solos_suffocation_deaths = data.get('eight_one_suffocation_deaths_bedwars', 0)
-
-        solos_kdr = solos_kills / solos_deaths
-
+        try:
+            solos_kdr = solos_kills / solos_deaths
+        except ZeroDivisionError:
+            solos_kdr = solos_kills
         solos_games_played = data.get('eight_one_games_played_bedwars', 0)
         solos_wins = data.get('eight_one_wins_bedwars', 0)
         solos_losses = data.get('eight_one_losses_bedwars', 0)
-        solos_wlr = solos_wins / solos_losses
-
+        try:
+            solos_wlr = solos_wins / solos_losses
+        except ZeroDivisionError:
+            solos_wlr = solos_wins
         solos_iron = data.get('eight_one_iron_resources_collected_bedwars', 0)
         solos_gold = data.get('eight_one_gold_resources_collected_bedwars', 0)
         solos_diamonds = data.get('eight_one_diamond_resources_collected_bedwars', 0)
         solos_emeralds = data.get('eight_one_emerald_resources_collected_bedwars', 0)
         solos_total_resources = solos_iron + solos_gold + solos_diamonds + solos_emeralds
-
         solos_purchases = data.get('eight_one_items_purchased_bedwars', 0)
         solos_permanent_purchases = data.get('eight_one_permanent _items_purchased_bedwars', 0)
 
@@ -222,7 +226,10 @@ def identity_theft(player_name):
         duos_final_magic_deaths = data.get('eight_two_magic_final_deaths_bedwars', 0)
         duos_final_suffocation_deaths = data.get('eight_two_suffocation_final_deaths_bedwars', 0)
 
-        duos_fkdr = duos_final_kills / duos_final_deaths
+        try:
+            duos_fkdr = duos_final_kills / duos_final_deaths
+        except ZeroDivisionError:
+            duos_fkdr = duos_final_kills
 
         duos_kills = data.get('eight_two_kills_bedwars', 0)
         duos_void_kills = data.get('eight_two_void_kills_bedwars', 0)
@@ -240,7 +247,10 @@ def identity_theft(player_name):
         duos_magic_deaths = data.get('eight_two_magic_deaths_bedwars', 0)
         duos_suffocation_deaths = data.get('eight_two_suffocation_deaths_bedwars', 0)
 
-        duos_kdr = duos_kills / duos_deaths
+        try:
+            duos_kdr = duos_kills / duos_deaths
+        except ZeroDivisionError:
+            duos_kdr = duos_kills
 
         duos_games_played = data.get('eight_two_games_played_bedwars', 0)
         duos_wins = data.get('eight_two_wins_bedwars', 0)
