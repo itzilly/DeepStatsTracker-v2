@@ -63,7 +63,7 @@ def save(data, uuid, star):
     solos_beds_lost = data.get('eight_one_beds_broken_bedwars')
 
 
-# # # Per-Game Stats
+# # # Per-Game/Star Stats
     try:
         solos_fkdr = solos_final_kills / solos_final_deaths
     except ZeroDivisionError:
@@ -175,6 +175,17 @@ def save(data, uuid, star):
         solos_final_deaths_per_star,
         solos_kills_per_star,
         solos_deaths_per_star,
+        solos_games_per_star,
+        solo_wins_per_star,
+        solo_losses_per_star,
+        solo_void_deaths_per_star,
+        solos_iron_per_star,
+        solos_gold_per_star,
+        solos_diamonds_per_star,
+        solos_emeralds_per_star,
+        solos_total_resources_per_star,
+        solos_purchases_per_star,
+        solos_permanent_purchases_per_star,
 
         solos_fkdr,
         solos_kdr,
