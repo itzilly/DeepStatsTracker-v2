@@ -169,6 +169,11 @@ def save(data, uuid, star):
 # # # It contains all the values you've chosen to log
     solo_stats = [
         stars,
+        solos_final_kills_per_star,
+        solos_final_deaths_per_star,
+        solos_kills_per_star,
+        solos_deaths_per_star,
+
         solos_fkdr,
         solos_kdr,
         solos_games_played,
