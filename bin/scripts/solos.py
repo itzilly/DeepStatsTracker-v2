@@ -165,8 +165,10 @@ def save(data, uuid, star):
     except ZeroDivisionError:
         solos_permanent_purchases_per_game = solos_permanent_purchases
 
+
 # # # This array is what is passed to the logger script
 # # # It contains all the values you've chosen to log
+
     solo_stats = [
         stars,
         solos_final_kills_per_star,
