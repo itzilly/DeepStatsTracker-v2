@@ -76,9 +76,6 @@ def save(data, uuid, star):
         solos_wlr = solos_wins / solos_losses
     except ZeroDivisionError:
         solos_wlr = solos_wins
-
-
-
     try:
         solos_final_kills_per_star = solos_final_kills / stars
     except ZeroDivisionError:
@@ -95,10 +92,6 @@ def save(data, uuid, star):
         solos_deaths_per_star = solos_kills / stars
     except ZeroDivisionError:
         solos_deaths_per_star = solos_kills
-
-
-
-
     try:
         solos_average_resources = solos_total_resources / solos_games_played
     except ZeroDivisionError:
@@ -174,21 +167,6 @@ def save(data, uuid, star):
 
 # # # This array is what is passed to the logger script
 # # # It contains all the values you've chosen to log
-#     solo_stats = [date, solos_final_kills, solos_final_void_kills,
-#                   solos_final_projectile_kills, solos_final_fall_kills,
-#                   solos_final_explosion_kills, solos_final_magic_kills,
-#                   solos_final_suffocation_kills, solos_final_deaths,
-#                   solos_final_void_deaths, solos_final_projectile_deaths,
-#                   solos_final_fall_deaths, solos_final_explosion_deaths,
-#                   solos_final_magic_deaths, solos_final_suffocation_deaths,
-#                   solos_fkdr, solos_kills, solos_void_kills,
-#                   solos_projectile_kills, solos_fall_kills, solos_explosion_kills,
-#                   solos_magic_kills, solos_suffocation_kills, solos_deaths,
-#                   solos_void_deaths, solos_projectile_deaths, solos_fall_deaths,
-#                   solos_explosion_deaths, solos_magic_deaths, solos_suffocation_deaths,
-#                   solos_kdr, solos_games_played, solos_wins, solos_losses, solos_wlr,
-#                   solos_iron, solos_gold, solos_diamonds, solos_emeralds,
-#                   solos_total_resources, solos_purchases, solos_permanent_purchases]
     solo_stats = [
         stars,
         solos_fkdr,
