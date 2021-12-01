@@ -1,27 +1,26 @@
-from bin.scripts import utilz
+from bin.scripts.utilz import time, date
 
 logger = 'bin/logger.txt'
-mytime = str(utilz.time)
-mydate = str(utilz.date)
+
 
 def info(data):
-    print(data)
+    print(f"[INFO] {data}")
     with open(logger, 'a') as log:
-        log.write("[ INFO ] " + mydate + " " + mytime + " : " + data + "\n")
+        log.write(f" [ INFO ] " + date() + " " + time() + " : " + data + "\n")
         log.close()
 
 
 def warn(data):
-    print(data)
+    print(f"[WARNING] {data}")
     with open(logger, 'a') as log:
-        log.write(" [WARNING ] " + mydate + " " + mytime + " : " + data + "\n")
+        log.write(f" [ WARNING ] " + date() + " " + time() + " : " + data + "\n")
         log.close()
 
 
 def severe(data):
-    print(data)
+    print(f"[ERROR] {data}")
     with open(logger, 'a') as log:
-        log.write("[ ERROR ] " + mydate + " " + mytime + " : " + data + "\n")
+        log.write(f" [ ERROR ] " + date() + " " + time() + " : " + data + "\n")
         log.close()
 
 
