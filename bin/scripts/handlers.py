@@ -29,27 +29,41 @@ def create_workbook(uuid, player_name):
     solo_sheet = workbook.create_sheet("Bedwars Solos")
     solo_sheet.title = "Bedwars Solos"
     solo_sheet = workbook.get_sheet_by_name("Bedwars Solos")
-    solo_sheet.append(individual_titles)
+
+    normals_titles = [
+        'Date', 'Stars', 'Final Kills', 'Final Void Kills', 'Final Kills Non Void', 'Final Projectile Kills',
+        'Final Fall Kills', 'Final Explosion Kills', 'Final Magic Kills', 'Final Suffocation Kills',
+        'Final Deaths', 'Final Void Deaths', 'Final Deaths Non World', 'Final Projectile Deaths',
+        'Final Fall Deaths', 'Final Explosions Deaths', 'Final Magic Deaths', 'Final Suffocation Deaths',
+        'Kills', 'Void Kills', 'Kills Non Void', 'Projectile Kills', 'Fall Kills', 'Explosion Kills',
+        'Magic Kills', 'Suffocation Kills', 'deaths', 'Void Deaths', 'Deaths Non Void', 'Projectile Deaths',
+        'Fall Deaths', 'Explosion Deaths', 'Magic Deaths', 'Suffocation Deaths', 'FKDR', 'KDR', 'Games Played',
+        'Wins', 'Losses', 'Iron', 'Gold', 'Diamonds', 'Emeralds', 'Total Resources', 'Iron Per Game', 'Gold Per Game',
+        'Diamonds Per Game', 'Emeralds Per Game', 'Total Resources Per Game', 'Purchases', 'Permanent Purchases',
+        'Beds Broken', 'Beds Lost', 'BBLR', 'Beds Broken Per Game'
+    ]
+
+    solo_sheet.append(normals_titles)
 
     duo_sheet = workbook.create_sheet("Bedwars Duos")
     duo_sheet.title = "Bedwars Duos"
     duo_sheet = workbook.get_sheet_by_name("Bedwars Duos")
-    duo_sheet.append(individual_titles)
+    duo_sheet.append(normals_titles)
 
     threes_sheet = workbook.create_sheet("Bedwars Threes")
     threes_sheet.title = "Bedwars Threes"
     threes_sheet = workbook.get_sheet_by_name("Bedwars Threes")
-    threes_sheet.append(individual_titles)
+    threes_sheet.append(normals_titles)
 
     fours_sheet = workbook.create_sheet("Bedwars Fours")
     fours_sheet.title = "Bedwars Fours"
     fours_sheet = workbook.get_sheet_by_name("Bedwars Fours")
-    fours_sheet.append(individual_titles)
-
+    fours_sheet.append(normals_titles)
+    
     FoF_sheet = workbook.create_sheet("Bedwars FoF")
     FoF_sheet.title = "Bedwars FoF"
     FoF_sheet = workbook.get_sheet_by_name("Bedwars FoF")
-    FoF_sheet.append(individual_titles)
+    FoF_sheet.append(normals_titles)
 
     workbook.remove_sheet(sheet)
     workbook.save(path)

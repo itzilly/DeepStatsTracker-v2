@@ -20,11 +20,17 @@ def warn(data):
 def severe(data):
     print(f"[ERROR] {data}")
     with open(logger, 'a') as log:
-        log.write(f" [ ERROR ] " + date() + " " + time() + " : " + data + "\n")
+        log.write(" [ ERROR ] " + date() + " " + time() + f" : {data}" + "\n")
         log.close()
 
 
 def new_instance():
     with open(logger, 'a') as log:
         log.write('\n')
+        log.close()
+
+
+def done():
+    with open(logger, 'a') as log:
+        log.write(" [ Success ] \n")
         log.close()

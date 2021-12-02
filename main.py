@@ -25,7 +25,7 @@ getLogger.info(f"Reading {targets} for list of targets, found {tracking}")
 length = len(tracking)
 i = 0
 while i < length:
-    getLogger.info(f"Sealing {tracking[i]}")
+    getLogger.info(f"Registered {tracking[i]}")
     try:
         utilz.identity_theft(tracking[i])
         i += 1
@@ -33,5 +33,8 @@ while i < length:
         getLogger.severe(f"Error reading player's from {targets}, please ensure you have properly formatted the "
                          f"target list!")
         getLogger.severe(error)
-        break
+        getLogger.severe(f"{tracking[i]} is a malformed UUID! Please enter a valid username")
+        exit()
+
+getLogger.done()
 
