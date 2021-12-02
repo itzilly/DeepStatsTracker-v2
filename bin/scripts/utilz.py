@@ -5,6 +5,7 @@ from bin.scripts import duos
 from bin.scripts import threes
 from bin.scripts import fours
 from bin.scripts import FoF
+from bin.scripts import overall
 from datetime import datetime
 from mcuuid import MCUUID
 import requests
@@ -128,4 +129,5 @@ def identity_theft(player_name):
         threes.save(data, uuid, stars)
         fours.save(data, uuid, stars)
         FoF.save(data, uuid, stars)
+        overall.save(data, uuid, stars)
         
