@@ -1,11 +1,6 @@
 from bin.scripts import getLogger
 from bin.scripts import handlers
-from bin.scripts import solos
-from bin.scripts import duos
-from bin.scripts import threes
-from bin.scripts import fours
-from bin.scripts import FoF
-from bin.scripts import overall
+from bin.scripts import solos, duos, threes, fours, FoF, overall, duo_utlimate, four_ultimate
 from datetime import datetime
 from mcuuid import MCUUID
 import requests
@@ -129,5 +124,7 @@ def identity_theft(player_name):
         threes.save(data, uuid, stars)
         fours.save(data, uuid, stars)
         FoF.save(data, uuid, stars)
+        duo_utlimate.save(data, uuid, stars)
+        four_ultimate.save(data, uuid, stars)
         overall.save(data, uuid, stars)
         

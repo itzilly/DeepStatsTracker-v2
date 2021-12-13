@@ -1,7 +1,8 @@
 from json import JSONDecodeError
-
 from bin.scripts import getLogger
 from bin.scripts import utilz
+from bin.guis import gui_display_player_data_folders
+from PyQt5.QtWidgets import QApplication, QLabel
 
 
 utilz.check_tracking_list()
@@ -38,3 +39,4 @@ while i < length:
 
 getLogger.done()
 
+gui_display_player_data_folders.run()

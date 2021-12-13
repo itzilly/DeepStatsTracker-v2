@@ -55,10 +55,7 @@ def save(data, uuid, star):
     gold = data.get('eight_two_gold_resources_collected_bedwars', 0)
     diamonds = data.get('eight_two_diamond_resources_collected_bedwars', 0)
     emeralds = data.get('eight_two_emerald_resources_collected_bedwars', 0)
-    total_resources = data.get('eight_two_iron_resources_collected_bedwars', 0) + data.get(
-        'eight_two_gold_resources_collected_bedwars', 0) + data.get('eight_two_diamond_resources_collected_bedwars',
-                                                                    0) + data.get(
-        'eight_two_emerald_resources_collected_bedwars', 0)
+    total_resources = data.get('eight_two_iron_resources_collected_bedwars', 0) + data.get('eight_two_gold_resources_collected_bedwars', 0) + data.get('eight_two_diamond_resources_collected_bedwars', 0) + data.get('eight_two_emerald_resources_collected_bedwars', 0)
     iron_per_game = data.get('eight_two_iron_resources_collected_bedwars', 0) / data.get(
         'eight_two_games_played_bedwars', 1)
     gold_per_game = data.get('eight_two_gold_resources_collected_bedwars', 0) / data.get(

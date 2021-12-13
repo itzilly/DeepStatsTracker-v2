@@ -68,6 +68,61 @@ def create_workbook(uuid, player_name):
     FoF_sheet = workbook.get_sheet_by_name("Bedwars FoF")
     FoF_sheet.append(normals_titles)
 
+    duo_ult_sheet = workbook.create_sheet("Bedwars Duos Ultimates")
+    duo_ult_sheet.title = "Bedwars Duos Ultimates"
+    duo_ult_sheet = workbook.get_sheet_by_name("Bedwars Duos Ultimates")
+    duo_ult_sheet.append(normals_titles)
+
+    four_ult_sheet = workbook.create_sheet("Bedwars Fours Ultimates")
+    four_ult_sheet.title = "Bedwars Fours Ultimates"
+    four_ult_sheet = workbook.get_sheet_by_name("Bedwars Fours Ultimates")
+    four_ult_sheet.append(normals_titles)
+    
+    duo_rush_sheet = workbook.create_sheet("Bedwars Duos Rush")
+    duo_rush_sheet.title = "Bedwars Duos Rush"
+    duo_rush_sheet = workbook.get_sheet_by_name("Bedwars Duos Rush")
+    duo_rush_sheet.append(normals_titles)
+
+    four_rush_sheet = workbook.create_sheet("Bedwars Fours rushimates")
+    four_rush_sheet.title = "Bedwars Fours rushimates"
+    four_rush_sheet = workbook.get_sheet_by_name("Bedwars Fours rushimates")
+    four_rush_sheet.append(normals_titles)
+    
+    duo_no_void_sheet = workbook.create_sheet("Bedwars Duos Voidless")
+    duo_no_void_sheet.title = "Bedwars Duos Voidless"
+    duo_no_void_sheet = workbook.get_sheet_by_name("Bedwars Duos Voidless")
+    duo_no_void_sheet.append(normals_titles)
+
+    four_no_void_sheet = workbook.create_sheet("Bedwars Fours Voidless")
+    four_no_void_sheet.title = "Bedwars Fours Voidless"
+    four_no_void_sheet = workbook.get_sheet_by_name("Bedwars Fours Voidless")
+    four_no_void_sheet.append(normals_titles)
+    
+    duo_armed_sheet = workbook.create_sheet("Bedwars Duos Armed")
+    duo_armed_sheet.title = "Bedwars Duos Armed"
+    duo_armed_sheet = workbook.get_sheet_by_name("Bedwars Duos Armed")
+    duo_armed_sheet.append(normals_titles)
+
+    four_armed_sheet = workbook.create_sheet("Bedwars Fours Armed")
+    four_armed_sheet.title = "Bedwars Fours Armed"
+    four_armed_sheet = workbook.get_sheet_by_name("Bedwars Fours Armed")
+    four_armed_sheet.append(normals_titles)
+    
+    duo_luck_sheet = workbook.create_sheet("Bedwars Duos Lucky")
+    duo_luck_sheet.title = "Bedwars Duos Lucky"
+    duo_luck_sheet = workbook.get_sheet_by_name("Bedwars Duos Lucky")
+    duo_luck_sheet.append(normals_titles)
+
+    four_luck_sheet = workbook.create_sheet("Bedwars Fours Lucky")
+    four_luck_sheet.title = "Bedwars Fours Lucky"
+    four_luck_sheet = workbook.get_sheet_by_name("Bedwars Fours Lucky")
+    four_luck_sheet.append(normals_titles)
+    
+    castle_sheet = workbook.create_sheet("Bedwars Castle")
+    castle_sheet.title = "Bedwars Castle"
+    castle_sheet = workbook.get_sheet_by_name("Bedwars Castle")
+    castle_sheet.append(normals_titles)
+
     workbook.remove_sheet(sheet)
     workbook.save(path)
 
@@ -94,41 +149,61 @@ def save_solos(uuid, solo_stats):
     getLogger.info("Saving player data to " + path + " BEDWARS SOLOS")
 
 
-def save_duos(uuid, solo_stats):
+def save_duos(uuid, stats):
     path = 'bin/playerData/' + uuid + '.xlsx'
     workbook = load_workbook(path)
     solos_sheet = workbook["Bedwars Duos"]
-    solos_sheet.append(solo_stats)
+    solos_sheet.append(stats)
     workbook.save(path)
 
     getLogger.info("Saving player data to " + path + " BEDWARS DUOS")
 
 
-def save_threes(uuid, solo_stats):
+def save_threes(uuid, stats):
     path = 'bin/playerData/' + uuid + '.xlsx'
     workbook = load_workbook(path)
     solos_sheet = workbook["Bedwars Threes"]
-    solos_sheet.append(solo_stats)
+    solos_sheet.append(stats)
     workbook.save(path)
 
     getLogger.info("Saving player data to " + path + " BEDWARS SOLOS")
 
 
-def save_fours(uuid, solo_stats):
+def save_fours(uuid, stats):
     path = 'bin/playerData/' + uuid + '.xlsx'
     workbook = load_workbook(path)
     solos_sheet = workbook["Bedwars Fours"]
-    solos_sheet.append(solo_stats)
+    solos_sheet.append(stats)
     workbook.save(path)
 
     getLogger.info("Saving player data to " + path + " BEDWARS Fours")
 
 
-def save_FoF(uuid, solo_stats):
+def save_FoF(uuid, stats):
     path = 'bin/playerData/' + uuid + '.xlsx'
     workbook = load_workbook(path)
     solos_sheet = workbook["Bedwars FoF"]
-    solos_sheet.append(solo_stats)
+    solos_sheet.append(stats)
     workbook.save(path)
 
     getLogger.info("Saving player data to " + path + " BEDWARS FoF")
+
+
+def save_duo_ult(uuid, stats):
+    path = 'bin/playerData/' + uuid + '.xlsx'
+    workbook = load_workbook(path)
+    solos_sheet = workbook["Bedwars Duos Ultimates"]
+    solos_sheet.append(stats)
+    workbook.save(path)
+
+    getLogger.info("Saving player data to " + path + " BEDWARS Duos Ultimates")
+
+
+def save_four_ult(uuid, stats):
+    path = 'bin/playerData/' + uuid + '.xlsx'
+    workbook = load_workbook(path)
+    solos_sheet = workbook["Bedwars Fours Ultimates"]
+    solos_sheet.append(stats)
+    workbook.save(path)
+
+    getLogger.info("Saving player data to " + path + " BEDWARS Fours Ultimates")
