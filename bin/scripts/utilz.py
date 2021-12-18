@@ -1,6 +1,6 @@
 from bin.scripts import getLogger
 from bin.scripts import handlers
-from bin.scripts import solos, duos, threes, fours, FoF, overall, duo_utlimate, four_ultimate
+from bin.scripts import solos, duos, threes, fours, FoF, overall
 from datetime import datetime
 from mcuuid import MCUUID
 import requests
