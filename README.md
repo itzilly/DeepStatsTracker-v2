@@ -2,19 +2,24 @@
 ## Extensive bedwars stats logger, includes progress visualization tools
 #### Created by: itzilly
 
+<p>
+------------------------------------------------------------ </p>
+Tool used for logging stats of players over time 
+Support for the following modes: 
+<ol>
+  <li>Bedwars Solos</li>
+  <li>Bedwars Duos</li>
+  <li>Bedwars Threes</li>
+  <li>Bedwars Fours</li>
+  <li>Bedwars Four on Four</li>
+</ol>
 
+Features to come: 
+<ol>
+  <li>Visualisers for recorded stats</li>
+  <li>Overall Stats Logging</li>
+  <li>Easy-to-use GUI</li>
+</ol>
+<p>
 ------------------------------------------------------------
-Tool used for logging stats of players over time \n
-Support for the following modes: \n
-  Bedwars Solos \n
-  Bedwars Duos \n
-  Bedwars Threes \n 
-  Bedwars Fours \n
-  Bedwars Fours on Fours \n
-  \n
-  \n
-Features to come: \n
-  Visualizers for stats \n 
-  Overall Bedwars Stats Logging \n
-  Easy-To-Use GUI \n
-------------------------------------------------------------
+</p>
